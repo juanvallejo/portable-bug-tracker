@@ -1,0 +1,20 @@
+Default: &defaults
+  database: portable-bug-tracker.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: portable-bug-tracker_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: portable-bug-tracker_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: portable-bug-tracker_production.sqlite3
+  poolsize: 100
+  <<: *defaults
