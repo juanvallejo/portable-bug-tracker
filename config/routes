@@ -5,3 +5,5 @@
 /robots.txt RobotsR GET
 
 / HomeR GET POST
+/bugs BugsR GET POST
+/bugs/#BugId BugR GET

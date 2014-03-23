@@ -1,0 +1,13 @@
+<h1> Bugs
+$if null bugs
+    <p> There are no bugs in the track
+$else
+    <ul>
+        $forall Entity bugId bug <- bugs
+            <li>
+                <a href=@{BugR bugId} > #{bugTitle bug}
+<hr>
+  <form method=post enctype=#{enctype}>
+    ^{bugWidget}
+    <div>
+        <input type=submit value="Submit a bug report">
